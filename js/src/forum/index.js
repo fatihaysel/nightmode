@@ -53,8 +53,13 @@ app.initializers.add('fof-nightmode', app => {
     extend(SessionDropdown.prototype, 'items', function (items) {
        addToItems(items);
     });
+   /* extend(IndexPage.prototype, 'sidebarItems', function (items) {
+        addToItems(items,'App-PrimaryControl','Button Button--icon');
+    });
+*/
     extend(IndexPage.prototype, 'sidebarItems', function (items) {
         addToItems(items,'App-PrimaryControl','Button Button--icon');
     });
+
 
 });

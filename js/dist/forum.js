@@ -192,7 +192,12 @@ flarum_app__WEBPACK_IMPORTED_MODULE_1___default.a.initializers.add('fof-nightmod
   Object(flarum_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_components_SessionDropdown__WEBPACK_IMPORTED_MODULE_2___default.a.prototype, 'items', function (items) {
     addToItems(items);
   });
-  Object(flarum_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_components_SessionDropdown__WEBPACK_IMPORTED_MODULE_2___default.a.prototype, 'items', function (items) {
+  /* extend(IndexPage.prototype, 'sidebarItems', function (items) {
+       addToItems(items,'App-PrimaryControl','Button Button--icon');
+   });
+  */
+
+  Object(flarum_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_components_IndexPage__WEBPACK_IMPORTED_MODULE_6___default.a.prototype, 'sidebarItems', function (items) {
     addToItems(items, 'App-PrimaryControl', 'Button Button--icon');
   });
 });
