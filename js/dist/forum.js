@@ -174,7 +174,7 @@ flarum_app__WEBPACK_IMPORTED_MODULE_1___default.a.initializers.add('fof-nightmod
     var lightState = app.session.user.preferences().fofNightMode == true ? false : true; // Add night mode link to session dropdown
 
     items.add(app.session.user && app.session.user.preferences().fofNightMode ? 'nightmode' : 'daymode', flarum_components_Button__WEBPACK_IMPORTED_MODULE_3___default.a.component({
-      icon: lightState == true ? 'far fa-moon' : 'far fa-sun',
+      icon: lightState == true ? 'fas fa-moon' : 'fas fa-sun',
       href: 'javascript:;',
       children: lightState == true ? app.translator.trans('fof-nightmode.forum.night') : app.translator.trans('fof-nightmode.forum.day'),
       itemClassName: itemClassName,
@@ -198,7 +198,9 @@ flarum_app__WEBPACK_IMPORTED_MODULE_1___default.a.initializers.add('fof-nightmod
   */
 
   Object(flarum_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_components_IndexPage__WEBPACK_IMPORTED_MODULE_6___default.a.prototype, 'sidebarItems', function (items) {
-    addToItems(items, 'App-PrimaryControl', 'Button Button--icon');
+    if (app.session.user) {
+      addToItems(items, 'App-PrimaryControl', 'Button Button--icon');
+    }
   });
 });
 
