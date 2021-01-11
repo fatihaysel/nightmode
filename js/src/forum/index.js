@@ -35,7 +35,7 @@ app.initializers.add('fof-nightmode', app => {
         // Add night mode link to session dropdown
         items.add(app.session.user && app.session.user.preferences().fofNightMode ? 'nightmode' : 'daymode',
             Button.component({
-                icon: lightState == true ? 'fas fa-moon' : 'fas fa-sun',
+                icon: lightState == true ? 'fas fa-moon' : 'fas fa-moon',
                 href: 'javascript:;',
                 children: lightState == true ? app.translator.trans('fof-nightmode.forum.night') : app.translator.trans('fof-nightmode.forum.day'),
                 itemClassName,
@@ -51,17 +51,17 @@ app.initializers.add('fof-nightmode', app => {
         );
     }
     extend(SessionDropdown.prototype, 'items', function (items) {
-       addToItems(items);
+        addToItems(items);
     });
-   /* extend(IndexPage.prototype, 'sidebarItems', function (items) {
-        addToItems(items,'App-PrimaryControl','Button Button--icon');
-    });
-*/
+    /* extend(IndexPage.prototype, 'sidebarItems', function (items) {
+         addToItems(items,'App-PrimaryControl','Button Button--icon');
+     });
+ */
     extend(IndexPage.prototype, 'sidebarItems', function (items) {
         if (app.session.user) {
             addToItems(items, 'App-PrimaryControl', 'Button Button--icon');
         }
-        });
-
+    });
 
 });
+

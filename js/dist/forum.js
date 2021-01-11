@@ -174,7 +174,7 @@ flarum_app__WEBPACK_IMPORTED_MODULE_1___default.a.initializers.add('fof-nightmod
     var lightState = app.session.user.preferences().fofNightMode == true ? false : true; // Add night mode link to session dropdown
 
     items.add(app.session.user && app.session.user.preferences().fofNightMode ? 'nightmode' : 'daymode', flarum_components_Button__WEBPACK_IMPORTED_MODULE_3___default.a.component({
-      icon: lightState == true ? 'fas fa-moon' : 'fas fa-sun',
+      icon: lightState == true ? 'fas fa-moon' : 'fas fa-moon',
       href: 'javascript:;',
       children: lightState == true ? app.translator.trans('fof-nightmode.forum.night') : app.translator.trans('fof-nightmode.forum.day'),
       itemClassName: itemClassName,
